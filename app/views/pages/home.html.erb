@@ -1,0 +1,31 @@
+<% if user_signed_in? %>
+	<div class="row">
+		<aside class="col-md-4">
+			<section class="user_info">
+				<%= render 'shared/user_info' %>
+			</section>
+			<section class="stats">
+				<%= render 'shared/stats' %>
+			</section>
+			<section>
+				<%= render 'shared/micropost_form' %>
+			</section>
+		</aside>
+		<div class="col-md-8">
+			<h3>Micropost Feed</h3>
+			<%= render 'shared/feed' %>
+		</div>	
+	</div>
+<% else %>
+	<div class="center jumbotron">
+		<h1>Welcome to Tweettoo</h1>
+		<h2>
+			This is twitter base application for our final project submittion.
+		</h2>
+		<p>
+			For final project subittion we made the twitter base application for the tyring to making such like application in future and learning for <%= link_to "Ruby on Rails", "http://www.rubyonrails.org" %>. In this we are 4 students are subitting this project. <br> 1. Ghulam Murtaza 2. Kalsoom Akhtar 3. Safiullah 4. Manzoor Ahmed <br> and we follow the book <%= link_to "Ruby on Rails Tutorial", "http://www.railstutorial.org" %> by 
+			<%= link_to "Michael Hartl", "http://www.michaelhartl.com" %>.
+		</p>
+		<%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+	</div>
+<% end %>
