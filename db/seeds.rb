@@ -15,7 +15,7 @@ end
 
 users = User.order(:created_at).take(17)
 20.times do
-	content = Faker::Lorem.sentence(14)
+	content = Faker::Lorem.sentence(12)
 	users.each { |user| user.microposts.create!(content: content) }
 end
 
