@@ -79,7 +79,7 @@ Rails.application.configure do
      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'] }
   }
 
-  # config.action_mailer.default_url_options = { host: 'tweettoo.herokuapp.com' }
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: 'tweettoo.herokuapp.com' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
 end
